@@ -1,0 +1,12 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: multiple packages installing 
+    action: yum name='{{item}}' state=present 
+    with_items:
+        - git 
+        - maven 
+        - docker
+        - httpd
+        - tree 
