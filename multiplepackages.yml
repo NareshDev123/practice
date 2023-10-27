@@ -6,6 +6,7 @@
       action: yum name='{{item}}' state=present
       with_items:
         - git
+        - maven2
         - maven1
         - docker
         - httpd
